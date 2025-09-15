@@ -91,6 +91,10 @@
 /obj/structure/vampdoor/proc/proc_unlock(method) //I am here so that dwelling doors can call me to properly process their alarms.
 	return
 
+/obj/structure/vampdoor/proc()
+	// This empty proc is added to prevent "undefined proc or verb /obj/structure/vampdoor/dwelling/()" errors
+	return
+
 /obj/structure/vampdoor/proc/get_integrity()
 	return obj_integrity
 
@@ -115,6 +119,8 @@
 	if(damage_amount <= 0) //No negative damage or zero damage.
 		return
 	obj_integrity -= damage_amount
+	if(obj_integrity < 1)
+		break_door()
 
 /obj/structure/vampdoor/proc/fix_door()
 	name = initial(name)
@@ -274,6 +280,6 @@
 		H.breaching = TRUE
 		H.breacher = user
 		H.breaching_target = src
-		RegisterSignal(user, COMSIG_MOVABLE_MOVED, CALLBACK(H, "remove_track", user))
+		RegisterSignal(H, COMSIG_MOVABLE_MOVED, CALLBACK(H, "remove_track", user), override = TRUE)
 		to_chat(user, "You begin smashing the door with the battering ram.")
 		INVOKE_ASYNC(H, TYPE_PROC_REF(/obj/item/melee/battering_ram, breaching_loop), user, src)

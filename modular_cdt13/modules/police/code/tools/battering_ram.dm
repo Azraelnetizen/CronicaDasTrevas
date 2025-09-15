@@ -27,7 +27,7 @@
 	. = ..()
 
 /// Removes any form of tracking from the user and the item , make sure to call it on the proper item
-/obj/item/melee/battering_ram/proc/remove_track(mob/living/carbon/human/user)
+/obj/item/melee/battering_ram/proc/remove_track(datum/source, mob/living/carbon/human/user)
 	SIGNAL_HANDLER
 	if(!breaching)
 		return
@@ -38,30 +38,33 @@
 	breacher = null
 
 /obj/item/melee/battering_ram/proc/breaching_loop(mob/living/user, obj/target)
-	if(user.stat || !target)
-		remove_track(user)
-		return FALSE
-	if(!(user.Adjacent(target)))
-		remove_track(user)
-		return FALSE
-	if(target.obj_integrity < 1)
-		remove_track(user)
-		qdel(target, TRUE)
-	var/mob/living/carbon/human/silly = breacher
-	if(!silly)
-		remove_track(user)
-		return FALSE
-	if(!(silly.Adjacent(target)))
-		remove_track(user)
-		return FALSE
-	if(do_after(user, breaching_delay))
-		if(QDELETED(target))
+	while(breaching)
+		if(user.stat || !target)
+			remove_track(user)
 			return FALSE
-		target.take_damage(force*breaching_multiplier)
-		target.Shake(5, 5, 10)
-		playsound(target, 'modular_cdt13/sounds/misc/door_slam.ogg', 70)
-		visible_message("[user] smashes the [target] forcefully with the [src]")
-		user.do_attack_animation(target, used_item = src)
-		breaching_loop(user, target)
-		return TRUE
-	remove_track(user)
+		if(!(user.Adjacent(target)))
+			remove_track(user)
+			return FALSE
+		if(target.obj_integrity < 1)
+			remove_track(user)
+			return FALSE
+		var/mob/living/carbon/human/silly = breacher
+		if(!silly)
+			remove_track(user)
+			return FALSE
+		if(!(silly.Adjacent(target)))
+			remove_track(user)
+			return FALSE
+		if(do_after(user, breaching_delay))
+			if(QDELETED(target))
+				return FALSE
+			target.take_damage(force*breaching_multiplier)
+			target.Shake(5, 5, 10)
+			playsound(target, 'modular_cdt13/sounds/misc/door_slam.ogg', 70)
+			visible_message("[user] smashes the [target] forcefully with the [src]")
+			user.do_attack_animation(target, used_item = src)
+			// Continue the loop
+		else
+			remove_track(user)
+			return FALSE
+	return TRUE
