@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(church_positions, list(
 ))
 
 GLOBAL_LIST_INIT(gang_positions, list(
-	"Triad Soldier",
+	"Soldado PCC",
 ))
 
 GLOBAL_LIST_INIT(ss13, list(
@@ -112,7 +112,7 @@ GLOBAL_LIST_INIT(position_categories, list(
     EXP_TYPE_CHURCH = list("jobs" = church_positions, "color" = " #fff700"),
     EXP_TYPE_POLICE = list("jobs" = police_positions, "color" = "#1d22cc"),
     EXP_TYPE_NATIONAL_SECURITY = list("jobs" = national_security_positions, "color" = " #000491"),
-    EXP_TYPE_GANG = list("jobs" = gang_positions, "color" = "#837524"),
+    EXP_TYPE_PCC = list("jobs" = gang_positions, "color" = "#b3b3b3"),
     EXP_TYPE_TZIMISCE = list("jobs" = tzimisce_positions, "color" = "#fa0207")
 ))
 
@@ -122,7 +122,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_CAMARILLIA = list("titles" = command_positions),
 	EXP_TYPE_TREMERE = list("titles" = tremere_positions),
 	EXP_TYPE_ANARCH = list("titles" = anarch_positions),
-	EXP_TYPE_GANG = list("titles" = gang_positions),
+	EXP_TYPE_PCC = list("titles" = gang_positions),
     EXP_TYPE_OTHER_CITIZEN = list("titles" = citizen_positions),
     EXP_TYPE_COUNCIL = list("titles" = camarilla_council_positions),
     EXP_TYPE_POLICE = list("titles" = police_positions),

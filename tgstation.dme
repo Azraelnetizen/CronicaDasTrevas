@@ -3410,7 +3410,6 @@
 #include "code\modules\vtmb\jobs\supply_assistant.dm"
 #include "code\modules\vtmb\jobs\swat.dm"
 #include "code\modules\vtmb\jobs\taxi.dm"
-#include "code\modules\vtmb\jobs\triad.dm"
 #include "code\modules\vtmb\jobs\voivode.dm"
 #include "code\modules\vtmb\jobs\zadruga.dm"
 #include "code\modules\vtmb\jobs\anarchs\baron.dm"
@@ -3605,4 +3604,5 @@
 #include "interface\menu.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+#include "modular_cdt13\modules\jobs\pcc.dm"
 // END_INCLUDE

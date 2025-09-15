@@ -122,8 +122,8 @@ SUBSYSTEM_DEF(carpool)
 	var/locked = TRUE
 	var/access = "none"
 
-	var/health = 100
-	var/maxhealth = 100
+	var/health = 540
+	var/maxhealth = 540
 	var/repairing = FALSE
 
 	var/last_beep = 0
