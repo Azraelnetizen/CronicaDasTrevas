@@ -1,4 +1,4 @@
-/obj/item/melee/breaching_hammer
+/obj/item/melee/battering_ram
 	name = "battering ram"
 	desc = "A metallic-plastic composite breaching battering ram, looks like a whack with this would severly harm or tire someone."
 	icon = 'modular_cdt13/modules/police/icons/police_gadgets.dmi'
@@ -23,11 +23,11 @@
 	/// the amount that the force is multiplied by , that is then applied as damage to the door.
 	var/breaching_multiplier = 2.5
 
-/obj/item/melee/breaching_hammer/Initialize(mapload)
+/obj/item/melee/battering_ram/Initialize(mapload)
 	. = ..()
 
 /// Removes any form of tracking from the user and the item , make sure to call it on the proper item
-/obj/item/melee/breaching_hammer/proc/remove_track(mob/living/carbon/human/user)
+/obj/item/melee/battering_ram/proc/remove_track(mob/living/carbon/human/user)
 	SIGNAL_HANDLER
 	if(!breaching)
 		return
@@ -37,7 +37,7 @@
 	breaching_target = null
 	breacher = null
 
-/obj/item/melee/breaching_hammer/proc/breaching_loop(mob/living/user, obj/target)
+/obj/item/melee/battering_ram/proc/breaching_loop(mob/living/user, obj/target)
 	if(user.stat || !target)
 		remove_track(user)
 		return FALSE

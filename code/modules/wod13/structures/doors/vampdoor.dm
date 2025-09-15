@@ -267,8 +267,8 @@
 						to_chat(user, "[src] is now unlocked.")
 						proc_unlock("key")
 						locked = FALSE
-	else if(istype(W, /obj/item/melee/breaching_hammer))
-		var/obj/item/melee/breaching_hammer/H = W
+	else if(istype(W, /obj/item/melee/battering_ram))
+		var/obj/item/melee/battering_ram/H = W
 		if(H.breaching)
 			return
 		H.breaching = TRUE
@@ -276,4 +276,4 @@
 		H.breaching_target = src
 		RegisterSignal(user, COMSIG_MOVABLE_MOVED, CALLBACK(H, "remove_track", user))
 		to_chat(user, "You begin smashing the door with the battering ram.")
-		INVOKE_ASYNC(H, TYPE_PROC_REF(/obj/item/melee/breaching_hammer, breaching_loop), user, src)
+		INVOKE_ASYNC(H, TYPE_PROC_REF(/obj/item/melee/battering_ram, breaching_loop), user, src)
