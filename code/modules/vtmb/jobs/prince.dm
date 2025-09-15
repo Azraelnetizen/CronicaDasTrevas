@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Camarilla and the Traditions"
+	supervisors = "a Camarilla e suas tradições."
 	selection_color = "#bd3327"
 	req_admin_notify = 1
 	minimal_player_age = 14
@@ -39,12 +39,12 @@
 		"Baron"
 	)
 
-	v_duty = "You are the top dog of this city. You hold Praxis over San Francisco, and your word is law. Make sure the Masquerade is upheld, and your status is respected."
+	v_duty = "Você é o chefão dessa cidade. Você mantém tudo em ordem, sua palavra é lei. Tenha certeza de que a masquerade não será quebrada."
 	experience_addition = 25
 
 /datum/job/vamp/prince/announce(mob/living/carbon/human/H)
 	..()
-	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(minor_announce), "Prince [H.real_name] is in the city!"))
+	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(minor_announce), "Monarca [H.real_name] está na cidade!"))
 
 /datum/outfit/job/prince
 	name = "Prince"

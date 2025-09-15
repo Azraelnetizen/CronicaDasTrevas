@@ -1,5 +1,5 @@
 /datum/outfit/job/swat
-	name = "Swat Officer"
+	name = "Oficial do BOES"
 	ears = /obj/item/p25radio/police/tactical
 	uniform = /obj/item/clothing/under/vampire/police
 	mask = /obj/item/clothing/mask/vampire/balaclava
@@ -45,13 +45,13 @@
 	H.forceMove(D.loc)
 
 /obj/effect/landmark/start/swat
-	name = "Swat Officer"
+	name = "Oficial do BOES"
 	delete_after_roundstart = FALSE
 
 /datum/antagonist/swat
-	name = "Swat Officer"
-	roundend_category = "Swat"
-	antagpanel_category = "Swat"
+	name = "Oficial do BOES"
+	roundend_category = "BOES"
+	antagpanel_category = "BOES"
 	job_rank = ROLE_SWAT
 	antag_hud_type = ANTAG_HUD_OPS
 	antag_hud_name = "synd"
@@ -63,7 +63,7 @@
 	var/custom_objective
 
 /datum/antagonist/swat/team_leader
-	name = "Swat Team Leader"
+	name = "Líder de Esquadrão BOES"
 	always_new_team = TRUE
 	var/title
 
@@ -78,19 +78,19 @@
 
 /datum/antagonist/swat/on_removal()
 	..()
-	to_chat(owner.current,"<span class='userdanger'>You are no longer in the Special Weapons and Tactics squad!</span>")
+	to_chat(owner.current,"<span class='userdanger'>Você não está mais no Batalhão de Operações Especiais Secretas!</span>")
 	owner.special_role = null
 
 /datum/antagonist/swat/greet()
-	to_chat(owner.current, "<span class='alertsyndie'>You're in the Special Weapons and Tactics squad.</span>")
-	to_chat(owner, "<span class='notice'>You are a [swat_team ? swat_team.swat_name : "swat"] officer!</span>")
+	to_chat(owner.current, "<span class='alertsyndie'>Você está no Batalhão de Operações Especiais Secretas.</span>")
+	to_chat(owner, "<span class='notice'>Você é um oficial do [swat_team ? swat_team.swat_name : "BOES"]!</span>")
 	spawn(3 SECONDS)
-	owner.announce_objectives()
+		owner.announce_objectives()
 
 
 /datum/antagonist/swat/proc/give_alias()
 	var/my_name = "Tyler"
-	var/list/swat_ranks = list("Private", "Private First Class", "Lance Corporal", "Corporal")
+	var/list/swat_ranks = list("Soldado", "Cabo", "Sargento", "Subtenente")
 	var/selected_rank = pick(swat_ranks)
 	if(owner.current.gender == MALE)
 		my_name = pick(GLOB.first_names_male)
@@ -111,20 +111,20 @@
 	else
 		my_name = pick(GLOB.first_names_female)
 	var/my_surname = pick(GLOB.last_names)
-	owner.current.fully_replace_character_name(null,"Squad Leader [my_name] [my_surname]")
+	owner.current.fully_replace_character_name(null,"Líder de Esquadrão [my_name] [my_surname]")
 
 /datum/team/swat/antag_listing_name()
 	if(swat_name)
-		return "[swat_name] Officers"
+		return "[swat_name] Oficiais"
 	else
-		return "Officers"
+		return "Oficiais"
 
 
 /datum/antagonist/swat/leader/greet()
-	to_chat(owner, "<B>You are the SWAT Officer in charge of this mission. You are responsible for guiding your team's operation.</B>")
-	to_chat(owner, "<B>If you feel you are not up to this task, give your command to another officer.</B>")
+	to_chat(owner, "<B>Você é o Oficial do BOES responsável por esta missão. Você é responsável por guiar a operação da sua equipe.</B>")
+	to_chat(owner, "<B>Se você sentir que não está à altura desta tarefa, passe o comando para outro oficial.</B>")
 	spawn(3 SECONDS)
-	owner.announce_objectives()
+		owner.announce_objectives()
 	addtimer(CALLBACK(src, PROC_REF(swatteam_name_assign)), 1)
 
 /datum/antagonist/swat/leader/proc/swatteam_name_assign()
@@ -134,7 +134,7 @@
 
 /datum/antagonist/swat/leader/proc/ask_name()
 	var/randomname = pick(GLOB.last_names)
-	var/newname = stripped_input(owner.current,"You are the squa leader. Please choose a name for your team.", "Name change",randomname)
+	var/newname = stripped_input(owner.current,"Você é o líder de esquadrão. Por favor, escolha um nome para sua equipe.", "Mudança de nome",randomname)
 	if (!newname)
 		newname = randomname
 	else
@@ -301,7 +301,7 @@
 /datum/team/swat
 	var/swat_name
 	var/core_objective = /datum/objective/swat
-	member_name = "Swat Officer"
+	member_name = "Oficial do BOES"
 	var/memorized_code
 	var/list/team_discounts
 	var/obj/item/nuclear_challenge/war_button
@@ -321,7 +321,7 @@
 	var/list/parts = list()
 	parts += "<span class='header'>[swat_name] Operatives:</span>"
 
-	var/text = "<br><span class='header'>The SWAT were:</span>"
+	var/text = "<br><span class='header'>Os BOES foram:</span>"
 	text += printplayerlist(members)
 	parts += text
 
@@ -337,7 +337,7 @@
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/from_ghosts/swat
-	name = "Swat Officer"
+	name = "Oficial do BOES"
 	antag_flag = ROLE_SWAT
 	antag_datum = /datum/antagonist/swat
 	required_candidates = 1
@@ -359,8 +359,8 @@
 	return ..()
 
 /datum/dynamic_ruleset/midround/from_ghosts/swat/finish_setup(mob/new_character, index)
-	new_character.mind.special_role = "Swat Officer"
-	new_character.mind.assigned_role = "Swat Officer"
+	new_character.mind.special_role = "Oficial do BOES"
+	new_character.mind.assigned_role = "Oficial do BOES"
 	if (index == 1) // Our first guy is the leader
 		var/datum/antagonist/swat/leader/new_role = new
 		swat_team = new_role.swat_team

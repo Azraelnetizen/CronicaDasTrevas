@@ -5,7 +5,7 @@
 	faction = "Vampire"
 	total_positions = 6
 	spawn_positions = 6
-	supervisors = "the Camarilla or the Anarchs"
+	supervisors = "a Camarilla ou os Anarquistas"
 	selection_color = "#e3e3e3"
 	exp_type_department = EXP_TYPE_SERVICES
 
@@ -20,7 +20,7 @@
 	display_order = JOB_DISPLAY_ORDER_GRAVEYARD
 	bounty_types = CIV_JOB_MINE
 
-	v_duty = "A vile curse has gripped the dead of this city. You must keep the graveyard clean and the Masquerade intact."
+	v_duty = "Você é um contratado da camarilla para ter certeza de que os mortos não fiquem de pé no cemitério, manter a máscara é sua prioridade."
 	minimal_masquerade = 0
 	experience_addition = 15
 	allowed_species = list("Vampire", "Ghoul", "Kuei-Jin")

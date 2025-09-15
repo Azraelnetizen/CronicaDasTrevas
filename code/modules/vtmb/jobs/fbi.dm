@@ -1,11 +1,11 @@
 
 /datum/job/vamp/fbi
 	title = "Federal Investigator"
-	department_head = list("Federal Bureau of Investigation")
+	department_head = list("Policia Federal")
 	faction = "Vampire"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = " the FBI"
+	supervisors = " a PF"
 	selection_color = "#1a1d8a"
 
 	outfit = /datum/outfit/job/fbi
@@ -20,13 +20,13 @@
 	allowed_species = list("Human")
 	minimal_generation = 13
 
-	duty = "Enforce the Law."
+	duty = "Você foi mandado para esta cidade com o simples objetivo de investigação sobre atividades paranormais."
 	minimal_masquerade = 0
 	my_contact_is_important = FALSE
 	known_contacts = list("Police Chief")
 
 /datum/outfit/job/fbi
-	name = "Federal Investigator"
+	name = "Agente Federal"
 	jobtype = /datum/job/vamp/fbi
 
 	ears = /obj/item/p25radio/police/government

@@ -116,9 +116,9 @@
 			to_chat(H, "<span class='userdanger'>The God has punished you for your sins!</span>", confidential = TRUE)
 
 /obj/item/card/id/prince
-	name = "leader badge"
-	id_type_name = "leader badge"
-	desc = "King in the castle!"
+	name = "crachá de líder"
+	id_type_name = "crachá de líder"
+	desc = "Rei no castelo!"
 	icon = 'code/modules/wod13/items.dmi'
 	icon_state = "id6"
 	inhand_icon_state = "card-id"
