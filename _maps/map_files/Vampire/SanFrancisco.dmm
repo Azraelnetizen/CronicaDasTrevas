@@ -7342,18 +7342,6 @@
 /obj/item/restraints/handcuffs,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
-"azK" = (
-/obj/police_department{
-	dir = 1
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/interior/police)
-"azL" = (
-/obj/police_department{
-	dir = 4
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/interior/police)
 "azM" = (
 /obj/structure/table,
 /obj/item/wire_cutters,
@@ -8531,27 +8519,8 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
 "aDy" = (
-/obj/police_department,
 /obj/machinery/vamp/atm{
 	pixel_y = 25
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/ghetto)
-"aDz" = (
-/obj/police_department{
-	dir = 1
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/ghetto)
-"aDA" = (
-/obj/police_department{
-	dir = 4
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/ghetto)
-"aDB" = (
-/obj/police_department{
-	dir = 8
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
@@ -10082,9 +10051,6 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/laundromat)
 "aIK" = (
-/obj/police_department{
-	dir = 8
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
@@ -10141,13 +10107,6 @@
 "aIW" = (
 /obj/effect/decal/wallpaper/low,
 /obj/structure/window_frame/market/reinforced,
-/turf/open/floor/plating/parquetry/old,
-/area/vtm/interior/shop)
-"aIX" = (
-/obj/american_flag{
-	pixel_y = 32
-	},
-/obj/weapon_showcase,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/shop)
 "aIY" = (
@@ -10505,21 +10464,6 @@
 /area/vtm/financialdistrict)
 "aKv" = (
 /obj/effect/decal/bordur,
-/mob/living/carbon/human/npc/hobo,
-/turf/open/floor/plating/sidewalk/rich,
-/area/vtm/financialdistrict)
-"aKw" = (
-/obj/effect/decal/bordur,
-/obj/american_flag{
-	pixel_y = 32
-	},
-/turf/open/floor/plating/sidewalk/rich,
-/area/vtm/financialdistrict)
-"aKx" = (
-/obj/effect/decal/bordur,
-/obj/american_flag{
-	pixel_y = 32
-	},
 /mob/living/carbon/human/npc/hobo,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/financialdistrict)
@@ -15796,19 +15740,6 @@
 /obj/effect/landmark/npcbeacon,
 /obj/effect/landmark/npcability,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/ghetto)
-"bdf" = (
-/obj/effect/decal/cardboard,
-/obj/american_flag{
-	pixel_y = 32
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/ghetto)
-"bdg" = (
-/obj/american_flag{
-	pixel_y = 32
-	},
-/turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto)
 "bdh" = (
 /obj/structure/roadsign/stop,
@@ -26560,9 +26491,6 @@
 /obj/effect/turf_decal/stripes{
 	dir = 4
 	},
-/obj/american_flag{
-	pixel_y = 32
-	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/police)
 "ccB" = (
@@ -27525,13 +27453,6 @@
 	dir = 5
 	},
 /turf/open/floor/plating/rough,
-/area/vtm/interior)
-"cxn" = (
-/obj/american_flag{
-	pixel_y = 32
-	},
-/obj/weapon_showcase,
-/turf/open/floor/plating/parquetry/old,
 /area/vtm/interior)
 "cxp" = (
 /obj/structure/chair/office,
@@ -37889,9 +37810,6 @@
 	pixel_x = -16
 	},
 /obj/item/clothing/under/costume/redcoat,
-/obj/american_flag{
-	pixel_y = 32
-	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior)
 "heD" = (
@@ -38670,9 +38588,6 @@
 "hrZ" = (
 /obj/effect/decal/rugs{
 	pixel_y = -5
-	},
-/obj/american_flag{
-	pixel_y = 32
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
@@ -39907,9 +39822,6 @@
 /area/vtm/dwelling/chinatown01)
 "hWA" = (
 /obj/item/kirbyplants/random,
-/obj/american_flag{
-	pixel_y = 32
-	},
 /obj/structure/trad{
 	pixel_y = 32
 	},
@@ -45417,15 +45329,6 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"ktm" = (
-/obj/effect/turf_decal/stripes{
-	dir = 8
-	},
-/obj/american_flag{
-	pixel_y = 32
-	},
-/turf/open/floor/plating/vampplating,
-/area/vtm/interior/police)
 "ktA" = (
 /obj/structure/chair/wood{
 	dir = 1
@@ -71351,12 +71254,6 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/dwelling/chinatown06)
-"wjH" = (
-/obj/american_flag{
-	pixel_y = 32
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/interior/shop)
 "wjL" = (
 /obj/effect/decal/bordur{
 	dir = 8
@@ -157525,7 +157422,7 @@ avG
 uvw
 aiV
 wjE
-cxn
+ldM
 ajD
 aEJ
 wWb
@@ -158553,7 +158450,7 @@ aup
 uvw
 aiV
 wjE
-cxn
+ldM
 ajD
 aEJ
 aiV
@@ -169596,7 +169493,7 @@ bAo
 ard
 aBt
 apX
-wjH
+aoy
 aoy
 aoy
 aoy
@@ -170656,7 +170553,7 @@ aIW
 aoy
 apA
 aog
-aKw
+aId
 aGv
 aHw
 aGv
@@ -170907,7 +170804,7 @@ aHw
 aGv
 aGr
 apX
-aIX
+aJQ
 aqm
 aIW
 aoy
@@ -171935,7 +171832,7 @@ aHw
 aGv
 aGr
 apX
-aIX
+aJQ
 aqm
 aIW
 aoy
@@ -172198,7 +172095,7 @@ aIW
 aoy
 apA
 aog
-aKx
+aKv
 aGv
 aHw
 aGv
@@ -190405,7 +190302,7 @@ anb
 ajU
 ajU
 azu
-azK
+azT
 azT
 azT
 azT
@@ -190662,7 +190559,7 @@ anb
 ajU
 ajU
 azu
-azL
+azT
 azT
 azT
 azT
@@ -195815,7 +195712,7 @@ aAo
 azT
 aCX
 azv
-aDz
+ajU
 ajU
 alT
 aiI
@@ -196072,7 +195969,7 @@ azT
 azT
 gvv
 azv
-aDA
+ajU
 ajU
 oqk
 aiI
@@ -196329,7 +196226,7 @@ azT
 azT
 phk
 azv
-aDB
+ajU
 ajU
 alT
 aiI
@@ -199738,7 +199635,7 @@ aoy
 aoy
 aoy
 aog
-bdf
+ajW
 alT
 bdx
 bdx
@@ -200760,7 +200657,7 @@ eQt
 ajU
 ajU
 bar
-aIX
+aJQ
 aqm
 bbH
 aoy
@@ -201788,7 +201685,7 @@ mRv
 ran
 ajU
 bar
-aIX
+aJQ
 aqm
 bbH
 aoy
@@ -202822,7 +202719,7 @@ aoy
 aoy
 apA
 aog
-bdg
+ajU
 alT
 bdx
 bdx
@@ -259804,7 +259701,7 @@ azv
 ghr
 aAN
 tJI
-ktm
+cRm
 cRm
 iJw
 cRm

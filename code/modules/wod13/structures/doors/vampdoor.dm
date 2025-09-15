@@ -91,6 +91,9 @@
 /obj/structure/vampdoor/proc/proc_unlock(method) //I am here so that dwelling doors can call me to properly process their alarms.
 	return
 
+/obj/structure/vampdoor/proc/get_integrity()
+	return obj_integrity
+
 /obj/structure/vampdoor/proc/break_door()
 	name = "door frame"
 	desc = "An empty door frame. Someone removed the door by force. A special door repair kit should be able to fix this."
@@ -102,6 +105,16 @@
 	locked = FALSE
 	icon_state = "[baseicon]-b"
 	update_icon()
+
+/obj/structure/vampdoor/take_damage(damage_amount, damage_type, damage_flag, sound_effect, attack_dir, armour_penetration)
+	. = ..()
+	if(door_broken) //No need to process damage on a broken door.
+		return
+	if(damage_type == BURN && !burnable) //If the door is not burnable, ignore burn damage.
+		return
+	if(damage_amount <= 0) //No negative damage or zero damage.
+		return
+	obj_integrity -= damage_amount
 
 /obj/structure/vampdoor/proc/fix_door()
 	name = initial(name)
@@ -254,3 +267,13 @@
 						to_chat(user, "[src] is now unlocked.")
 						proc_unlock("key")
 						locked = FALSE
+	else if(istype(W, /obj/item/melee/breaching_hammer))
+		var/obj/item/melee/breaching_hammer/H = W
+		if(H.breaching)
+			return
+		H.breaching = TRUE
+		H.breacher = user
+		H.breaching_target = src
+		RegisterSignal(user, COMSIG_MOVABLE_MOVED, CALLBACK(H, "remove_track", user))
+		to_chat(user, "You begin smashing the door with the battering ram.")
+		INVOKE_ASYNC(H, TYPE_PROC_REF(/obj/item/melee/breaching_hammer, breaching_loop), user, src)
