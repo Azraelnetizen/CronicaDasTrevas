@@ -1,8 +1,8 @@
 {
 	"version": 1,
-	"map_name": "San Francisco",
+	"map_name": "Ilha do Governador",
 	"map_path": "map_files/Vampire",
-	"map_file": "SanFrancisco.dmm",
+	"map_file": "RiodeJaneiro.dmm",
 	"traits": [
 		{
 			"Up": 1,
