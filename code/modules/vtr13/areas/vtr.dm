@@ -1,5 +1,6 @@
 /area/vtm/vtr
-
+	requires_power = FALSE
+	has_gravity = STANDARD_GRAVITY
 	ambience_index = null
 	var/sector
 	var/ambiance_message

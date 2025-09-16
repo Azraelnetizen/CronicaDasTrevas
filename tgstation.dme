@@ -3554,7 +3554,6 @@
 #include "code\modules\vtr13\turfs\hotel_keys.dm"
 #include "code\modules\vtr13\turfs\river.dm"
 #include "code\modules\vtr13\turfs\shit.dm"
-#include "code\modules\vtr13\turfs\SSTides.dm"
 #include "code\modules\vtr13\turfs\vampocean.dm"
 #include "code\modules\wod13\ambient.dm"
 #include "code\modules\wod13\ammostack.dm"

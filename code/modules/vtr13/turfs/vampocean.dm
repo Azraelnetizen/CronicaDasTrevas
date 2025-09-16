@@ -14,8 +14,3 @@
 /turf/open/floor/plating/vampocean/Initialize()
 	..()
 	set_light(1, 0.5, "#a4b7ff")
-
-
-/turf/open/floor/plating/vampocean/Entered(atom/movable/AM)
-	if(istype(AM, /mob) || istype(AM, /obj/item))
-		SStides.send_to_shore(AM)
