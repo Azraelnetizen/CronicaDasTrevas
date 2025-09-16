@@ -49605,6 +49605,9 @@
 	pixel_y = 32
 	},
 /obj/item/vtm/dwelling_alarm_card,
+/obj/item/melee/battering_ram,
+/obj/item/melee/battering_ram,
+/obj/item/melee/battering_ram,
 /turf/closed/wall/vampwall/painted/low,
 /area/vtm/interior/police)
 "myf" = (
