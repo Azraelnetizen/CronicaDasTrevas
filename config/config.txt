@@ -22,7 +22,7 @@ SERVERNAME Cronica das Trevas XIII
 # SERVERSQLNAME wod13
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Rio de Janeiro
+STATIONNAME São Paulo
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
