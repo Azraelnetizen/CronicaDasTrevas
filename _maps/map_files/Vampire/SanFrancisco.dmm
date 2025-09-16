@@ -28851,9 +28851,13 @@
 "dgT" = (
 /obj/structure/table/wood,
 /obj/item/taperecorder{
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = 0
 	},
-/obj/item/pen,
+/obj/item/pen{
+	pixel_x = 0;
+	pixel_y = 0
+	},
 /obj/item/paper_bin{
 	pixel_y = 7;
 	pixel_x = -8
